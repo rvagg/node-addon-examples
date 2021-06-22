@@ -10,7 +10,6 @@ class MyObject {
 
  private:
   explicit MyObject(double value_ = 0);
-  ~MyObject();
 
   static napi_value New(napi_env env, napi_callback_info info);
   static napi_value GetValue(napi_env env, napi_callback_info info);
@@ -21,7 +20,6 @@ class MyObject {
 
   double value_;
   napi_env env_;
-  napi_ref wrapper_;
 };
 
 #endif  // TEST_ADDONS_NAPI_6_OBJECT_WRAP_MYOBJECT_H_
